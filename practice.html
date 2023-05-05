@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>practice</title>
+  <style>
+   html {
+     align-items: center;
+     height: 75%;
+     display: flex;
+     justify-content: center;
+     margin: 0;
+     font-family: Helvetica;
+     background-color: #1ae5c8
+   }
+   p {
+  border: 2px solid rgb(0 0 200 / 0.6);
+  background: rgb(0 0 200 / 0.6);
+  color: rgb(255 255 255 / 1);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+  border-radius: 10px;
+  padding: 3px 10px;
+  display: inline-block;
+  cursor: pointer;
+   }
+  </style>
+ </head>
+<body>
+ <p>What's the word: Thunderbird</p>
+
+ <script>
+const para = document.querySelector("p");
+
+para.addEventListener("click", updateName);
+
+function updateName() {
+  const name = prompt("Enter The Word");
+  para.textContent = `what's the word: ${name}`;
+}
+ </script>
+</body>
